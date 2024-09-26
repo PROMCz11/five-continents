@@ -93,7 +93,7 @@ a {
 }
 
 body {
-    background-color: red;
+    background-color: var(--clr-navy);
     color: white;
 }
 
