@@ -1,0 +1,194 @@
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+/* set up the body */
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------- */
+/* Styles              */
+/* ------------------- */
+
+:root {
+    --clr-navy: #09497D;
+    --clr-gray: #CACACA;
+}
+
+@font-face {
+    font-family: acumin;
+    src: url(assets/fonts/Acumin-Variable-Concept.ttf);
+}
+
+@font-face {
+    font-family: al-hurra;
+    src: url(assets/fonts/Al-Hurra-Txtreg-Bold.ttf);
+}
+
+@font-face {
+    font-family: hayah;
+    src: url(assets/fonts/Hayah.ttf);
+}
+
+.ff-acumin {font-family: acumin;}
+.ff-al-hurra {font-family: al-hurra;}
+.ff-hayah {font-family: hayah; line-height: 1;}
+
+.fs-small {font-size: 1rem}
+.fs-medium {font-size: 1.2rem}
+.fs-large {font-size: 2rem}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+body {
+    background-color: var(--clr-navy);
+    color: white;
+}
+
+main {
+    display: grid;
+    gap: 3rem;
+    text-align: center;
+    /* justify-content: center; */
+    padding-block: 3rem;
+}
+
+main > * {
+    /* border: 1px solid limegreen; */
+}
+
+.logo-container img {
+    width: 40%;
+    max-width: 300px;
+    margin: auto;
+}
+
+.illustration img {
+    max-width: 90%;
+}
+
+.illustration > img:first-of-type {
+    display: none;
+}
+
+.contact-info, .company-name, .general-manager {
+    justify-self: center;
+}
+
+.contact-info > div {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+
+.contact-info > div > div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.contact-info > div img {
+    width: 1.2rem;
+}
+
+@media (min-width: 1000px) {
+
+    .fs-small {font-size: 1rem}
+    .fs-medium {font-size: 2rem}
+    .fs-large {font-size: 3rem}
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+        height: 100vh;
+        height: 100svh;
+        align-items: center;
+        padding-block: 0;
+        padding-top: 3rem;
+        text-align: left;
+    }
+
+    .company-name, .general-manager {
+        align-self: flex-start;
+    }
+
+    .contact-info > div img {
+        width: 1.8rem
+    }
+
+    .logo-container {
+        grid-row: 2;
+    }
+
+    .logo-container img {
+        width: 60%;
+    }
+
+    .illustration {
+        grid-column: span 2;
+        align-self: flex-end;
+    }
+
+    .illustration img {
+        max-width: 80%;
+    }
+
+    .illustration > img:first-of-type {
+        display: block;
+    }
+
+    .illustration > img:last-of-type {
+        display: none;
+    }
+}
